@@ -22,7 +22,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 RUN chown -R appuser:appuser /usr/share/nginx/html /var/cache/nginx /var/log/nginx /etc/nginx/conf.d
 
 # Exponemos el nuevo puerto permitido
-EXPOSE 8080
+EXPOSE 80
 
 USER appuser
 CMD ["nginx", "-g", "daemon off;"]
