@@ -1,16 +1,13 @@
-version: '3.8'
-
 services:
   frontend:
     build: .
     container_name: despachos-frontend
     ports:
-      - "8080:8080"
+      - "80:80"
     restart: unless-stopped
     networks:
       - frontend-net
 
 networks:
   frontend-net:
-    external: true
-    name: despachos_frontend
+    driver: bridge
